@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Schedule Appointment</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    h2 { color: #333; }
+    form { max-width: 300px; margin: 0 auto; }
+    label { display: block; margin: 10px 0 5px; }
+    input, button { width: 100%; padding: 8px; margin: 5px 0; box-sizing: border-box; }
+    button { background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+    button:hover { background-color: #45a049; }
+    a { color: #4CAF50; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .note { color: #666; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+<h2>Schedule New Appointment</h2>
+<form method="post" action="/Assignment2/patient">
+  <input type="hidden" name="action" value="schedule">
+  <label>Doctor Username: <input type="text" name="doctorUsername" required></label>
+  <label>Date & Time: <input type="datetime-local" name="datetime" required></label>
+  <button type="submit">Schedule</button>
+</form>
+<p class="note">Please enter the exact Doctor Username as provided by the doctor (e.g., from their availability list).</p>
+<a href="/Assignment2/patient?action=viewProfile">Back to Profile</a>
+</body>
+</html>
